@@ -1,2 +1,7 @@
 C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirds\obj\Debug\AngryBirds.csprojAssemblyReference.cache
 C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirds\obj\Debug\AngryBirds.csproj.CoreCompileInputs.cache
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirds\bin\Debug\AngryBirds.exe.config
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirds\bin\Debug\AngryBirds.exe
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirds\bin\Debug\AngryBirds.pdb
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirds\obj\Debug\AngryBirds.exe
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirds\obj\Debug\AngryBirds.pdb
