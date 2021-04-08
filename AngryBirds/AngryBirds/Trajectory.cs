@@ -2,7 +2,7 @@
 
 namespace AngryBirds
 {
-    class Program
+    class Trajectory
     {
         static void Main(string[] args)
         {
