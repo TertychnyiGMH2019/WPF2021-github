@@ -1,0 +1,2 @@
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirds\obj\Debug\AngryBirds.csprojAssemblyReference.cache
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirds\obj\Debug\AngryBirds.csproj.CoreCompileInputs.cache

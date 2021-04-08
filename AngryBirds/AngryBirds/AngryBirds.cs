@@ -30,8 +30,23 @@ namespace AngryBirds
         {
             double speedX = _speed * Math.Cos(_angle),
                    speedY = _speed * Math.Sin(_angle);
-            return Math.Sqrt((speedY - G * time) * (speedY - G * time) + GetSquare(speedX));
+            return Math.Sqrt((speedY - G * time) * (speedY - G * time) + Square(speedX));
+        }
+        //посчитаем длину полета
+        private double GetFlyLength() { return Square(_speed) * Math.Sin(2 * _angle); }
+        //считаем максимальную высоту полета
+        private double GetMaxFlyHeight() { return Square(_speed * Square(Math.Sin(_angle))) / 2 * G; }
+        //все параметры в одну строку
+        public string CollectAllParams()
+        {
+            return $"Total fly time: {GetFlyTime()}{Environment.NewLine}Total fly length: {GetFlyLength()}{Environment.NewLine}Max fly height: {GetMaxFlyHeight()}";
+        }
+        //обьеденяем все в одну функцию
+        public void CalculateCoords(double time)
+        {
+            Y = CalculateY(time);
+            X = CalculateX(time);
+            MomentSpeed = CalculateSpeed(time);
         }
     }
-
 }
