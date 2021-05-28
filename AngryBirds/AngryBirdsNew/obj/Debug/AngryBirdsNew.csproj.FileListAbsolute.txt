@@ -1,0 +1,15 @@
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\AngryBirdsNew.csprojAssemblyReference.cache
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\MainWindow.g.cs
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\App.g.cs
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\AngryBirdsNew_MarkupCompile.cache
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\AngryBirdsNew_MarkupCompile.lref
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\bin\Debug\AngryBirdsNew.exe.config
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\bin\Debug\AngryBirdsNew.exe
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\bin\Debug\AngryBirdsNew.pdb
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\MainWindow.baml
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\AngryBirdsNew.g.resources
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\AngryBirdsNew.Properties.Resources.resources
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\AngryBirdsNew.csproj.GenerateResource.cache
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\AngryBirdsNew.csproj.CoreCompileInputs.cache
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\AngryBirdsNew.exe
+C:\Users\ПК\source\repos\TertychnyiGMH2019\WPF2021-github\AngryBirds\AngryBirdsNew\obj\Debug\AngryBirdsNew.pdb

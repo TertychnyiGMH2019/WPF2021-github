@@ -1,100 +1,120 @@
 ﻿using System;
 using System.IO;
-
 namespace AngryBirds
 {
     class Trajectory
     {
-        private const double g = 9.8;
-        private double[] X;
-        private double[] Y;
-        private int t;
-        public Trajectory(double ang, double v)
+        double ang, vel, mass;
+
+        public Trajectory(double a, double v, double m)
         {
-            ang = (ang * Math.PI) / 180; 
-            double t1 = (2 * v * Math.Sin(ang)) / g;
-            int l = (int)Math.Round(t1) * 10;
+            ang = (Math.PI * a) / 180;
+            vel = v;
+            mass = m;
+        }
+        public void WriteToConsole()
+        {
+            double v_x = vel * Math.Cos(ang);
+            double v_y = vel * Math.Sin(ang);
+            double x = 0, y = 0, t = 0.01;
 
-            t = l;
-            X= new double[l];
-            Y = new double[l];
+            Console.WriteLine("{0},   |||   {1}", x, y);
 
-            double k;
-            for (int i = 0; i < l; i++)
+            do
             {
-                k = i;
-                X[i] = v * Math.Cos(ang) * (k / 10);
-                Y[i] = (v * Math.Sin(ang) * (k / 10)) - (g * (k / 10) * (k / 10)) / 2;
-                if (Y[i] < 0)
-                {
-                    Y[i] = 0;
-                }
+                x = x + (0.01 * v_x);
+                y = y + (0.01 * v_y);
+
+                if (y < 0)
+                    y = 0;
+
+                v_x = VelX(t, v_x, mass, 0.01);
+                v_y = VelY(t, v_x, mass, 0.01);
+
+                Console.WriteLine("{0},   |||   {1}", x, y);
+
+                t += 0.01;
             }
-
-
+            while (y > 0);
         }
 
-        public void WriteToFile()
+        public void WriteToFile(string path = @"..\..\Chtoto.csv")
         {
-            string path = @"..\..\..\Chtoto.csv";
+
+
             using (StreamWriter in_File = new StreamWriter(path))
             {
+                in_File.WriteLine("angle= {0}; velocity= {1}; mass= {2}", (ang * 180 / Math.PI), vel, mass);
+                in_File.WriteLine("       t;       x;       y;");
 
-                in_File.Write("t:");
-                in_File.Write(';');
-                for (int i = 0; i < t; i++)
+                double v_x = vel * Math.Cos(ang);
+                double v_y = vel * Math.Sin(ang);
+                double x = 0, y = 0, t = 0.01;
+
+                in_File.WriteLine("0; {0};  {1}", x, y);
+
+                do
                 {
-                    in_File.Write(i);
-                    in_File.Write(';');
+                    x = x + (0.01 * v_x);
+                    y = y + (0.01 * v_y);
+
+                    if (y < 0)
+                        y = 0;
+
+                    v_x = VelX(t, v_x, mass, 0.01);
+                    v_y = VelY(t, v_x, mass, 0.01);
+
+                    in_File.WriteLine("{0}; {1}; {2}", t, x, y);
+
+                    t += 0.01;
                 }
-
-                in_File.WriteLine(" ");
-
-                in_File.Write("x:");
-                in_File.Write(';');
-                for (int i = 0; i < t; i++)
-                {
-                    in_File.Write(Y[i]);
-                    in_File.Write(';');
-                }
-
-                in_File.WriteLine(" ");
-
-                in_File.Write("y:");
-                in_File.Write(';');
-                for (int i = 0; i < t; i++)
-                {
-                    in_File.Write(Y[i]);
-                    in_File.Write(';');
-                }
+                while (y > 0);
             }
+
         }
-
-        public void WriteCoordinates()
+        private const double g = 9.8;
+        public double WindY(double time)
         {
-            Console.WriteLine("t:   x:   y:");
-            for (int i = 0; i < t; i++)
-            {
-                Console.WriteLine("{0}:   {1}   {2}", i, X[i], Y[i]);
-            }
+            return 7 * Math.Cos(2.5 * time);
+        }
+        public double WindX(double time)
+        {
+            return 9 * Math.Sin(5 * time);
+        }
+        public double VelY(double time, double vel, double mass, double delta)
+        {
+            return vel - ((g + (delta * WindY(time) * vel)) / mass);
+        }
+        public double VelX(double time, double vel, double mass, double delta)
+        {
+            return vel - (delta * WindX(time) * vel / mass);
+
         }
     }
+
     class Program
     {
         static void Main(string[] args)
         {
-            double ang, v;
-            ang = Convert.ToDouble(Console.ReadLine());
-            v = Convert.ToDouble(Console.ReadLine());
+            for (int i = 0; i < args.Length; i++)
+                Console.WriteLine(args[i]);
+            double angle, vel, mass;
+            angle = Convert.ToDouble(Console.ReadLine());
+            vel = Convert.ToDouble(Console.ReadLine());
+            mass = Convert.ToDouble(Console.ReadLine());
 
-            if (ang >= 90 || v <= 0)
+
+            if (angle >= 90 || vel <= 0 || mass <= 0)
             {
-                Console.WriteLine("Кидайте под углом не больше pi/2, с положительной скоростью");
+                Console.WriteLine("Ошибка ввода данных, координаты полёта тела будут найденны неверно");
             }
 
-            Trajectory myPoint = new Trajectory(ang, v);
-
-            myPoint.WriteToFile();
+            Trajectory Obj = new Trajectory(angle, vel, mass);
+            if (args.Length == 0)
+                Obj.WriteToFile();
+            else
+                Obj.WriteToFile(args[0]);
+            Obj.WriteToConsole();
 
         }
     }
