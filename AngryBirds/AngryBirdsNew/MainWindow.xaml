@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AngryBirdsNew"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="900">
 
     <Window.Resources>
         <Style x:Key="GridStyle1" TargetType="{x:Type Grid}"/>
@@ -19,7 +19,10 @@
             <ColumnDefinition Width="132*"/>
             <ColumnDefinition Width="133*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock HorizontalAlignment="Left" Margin="60,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.485,0.656" Width="142">
+        <Rectangle Fill="White" Height="53.2" Margin="42.733,43,41.533,0" VerticalAlignment="Top" Grid.Column="2"/>
+        <Rectangle Fill="White" Height="53.2" Margin="47.4,43,46.867,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Rectangle Fill="White" Height="53.2" Margin="40.8,43,40.667,0" VerticalAlignment="Top"/>
+        <TextBlock Margin="77.6,43,70.316,0" TextWrapping="Wrap" Height="16" RenderTransformOrigin="0.485,0.656" FontFamily="Yu Gothic UI" VerticalAlignment="Top" FontWeight="Bold">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1"/>
@@ -28,8 +31,8 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text=" Введите начальный угол"/><LineBreak/><Run/></TextBlock>
-        <TextBox x:Name="Ang" HorizontalAlignment="Left" Margin="69,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBoxTextChanged" Height="18"/>
-        <TextBlock HorizontalAlignment="Left" Margin="45,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="15" RenderTransformOrigin="0.485,0.656" Width="167" Grid.Column="1">
+        <TextBox x:Name="Ang" Margin="90.6,64,86.516,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBoxTextChanged" Height="18" BorderBrush="Black" Background="#FFB6D9FF"/>
+        <TextBlock Margin="66.513,43,46.867,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="15" RenderTransformOrigin="0.485,0.656" Grid.Column="1" FontFamily="Yu Gothic UI" FontWeight="Bold">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1"/>
@@ -38,8 +41,8 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="Введите начальн"/><Run Language="ru-ru" Text="ую "/><Run Text=" "/><Run Language="ru-ru" Text="скорость"/><LineBreak/><Run/></TextBlock>
-        <TextBox x:Name="Vel" HorizontalAlignment="Left" Margin="66,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBoxTextChanged" Grid.Column="1" Height="18"/>
-        <TextBlock HorizontalAlignment="Left" Margin="66,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="15" RenderTransformOrigin="4.328,-8.369" Width="120" Grid.Column="2">
+        <TextBox x:Name="Vel" Margin="88.4,63,88.717,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBoxTextChanged" Grid.Column="1" Height="18" BorderBrush="Black" Foreground="Black" Background="#FFB6D9FF" SelectionBrush="White"/>
+        <TextBlock Margin="90,43,89.367,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="15" RenderTransformOrigin="4.328,-8.369" Grid.Column="2" FontFamily="Yu Gothic UI" FontWeight="Bold">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1"/>
@@ -48,8 +51,20 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="  "/><Run Text="Введите "/><Run Text="массу тела"/><LineBreak/><Run/></TextBlock>
-        <TextBox x:Name="Mass" HorizontalAlignment="Left" Margin="66,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBoxTextChanged" Grid.Column="2" Height="18"/>
-        <Button Content="Рассчитать данные" HorizontalAlignment="Left" Margin="228,225,0,0" VerticalAlignment="Top" Click="ButtonClick" Width="327" Height="42" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="Mass" Margin="90,64,89.367,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBoxTextChanged" Grid.Column="2" Height="18" BorderBrush="Black" Background="#FFB6D9FF"/>
+        <Button Content="Рассчитать данные" Margin="228,225,228.2,0" VerticalAlignment="Top" Click="ButtonClick" Height="42" Grid.ColumnSpan="3" Background="#FFFCFCFC" BorderBrush="Black" FontFamily="Yu Gothic UI" FontWeight="Bold"/>
+        <Path Data="M30.4,108.4 C298.4,419.6 39.2,369.2 39.2,369.2" Fill="White" HorizontalAlignment="Left" Margin="40.8,113.2,0,43.383" Stretch="Fill" Width="121.436"/>
+        <Path Data="M30.4,108.4 C298.4,419.6 39.2,369.2 39.2,369.2" Fill="White" Margin="137.034,113.2,40.569,43.383" Stretch="Fill" Grid.Column="2" RenderTransformOrigin="0.5,0.5">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path Data="M63,44.2" Fill="White" HorizontalAlignment="Left" Height="0" Margin="63,44.2,0,0" Stretch="Fill" VerticalAlignment="Top" Width="0"/>
     </Grid>
 
 </Window>
